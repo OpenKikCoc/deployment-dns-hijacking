@@ -57,23 +57,5 @@ $ docker-compose up -d
 配置更新：
 
 1. 在控制台可快速修改 DNSmasq 配置，点击 `Save` 以快速重启并应用新配置。
+2. Nginx 更新：执行 ` reload.sh `；
 
-2. Nginx 更新有两种方式：
-
-   2.1 修改当前目录下 `./nginx/` 下的配置，随后 reload 容器中的 Nginx：**[ 推荐 ]**
-
-   ```shell
-   docker exec -i [nginx容器名/id] nginx -s reload
-   ```
-
-   2.2 修改当前目录下 `./nginx/` 下的配置，重新进行容器部署：
-
-   ```shell
-   # docker-compose up
-   $ ctrl^c
-   
-   # docker-compose up -d
-   docker-compose down
-   ```
-
-   
